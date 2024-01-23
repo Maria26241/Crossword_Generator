@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Give your game / page a title! -->
+  <title> Crossword Generator</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+
+  <!-- This will load the script file AFTER the document is loaded -->
+  <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+  <!-- Title and developer -->
+  <div>
+    <h1>Crossword Generator</h1>
+    <div id="developer"> <b>By: Julia</b> </div>
+  </div>
+
+  <!-- Buttons -->
+  <div id="buttons">
+    <button id="start_btn"> Start </button>
+    <button id="help_btn"> Help </button>
+    <button id="add_btn"> Add </button>
+    <button id="del_btn"> Delete </button>
+    <button id="submit_btn" hidden="true"> Submit </button>
+    <button id="replay_btn" hidden="true"> Replay? </button>
+  </div>
+
+  <!-- Instructions (adjusts with scenario) -->
+  <div id="instructions_txt" hidden="true">
+    <b> Start-up Instructions (Adjusts once you press "Start!")</b>
+    <br> <br>
+    <ul>
+      <li>
+        INPUT a word-hint combination, separated by a space.
+        <br>
+        Example: cow An animal that moos.
+      </li>
+      <li> Press "Add" to add your input to the list </li>
+      <li> Press "Delete" to remove the last list item if the input is empty, or input the exact word, hint or both then
+        press "Delete" to remove that selection. </li>
+      <li> Repetitions of words and/or hints are prohibited. </li>
+      <li> Press "Start" once you have your list ready. You may not edit this list after pressing "Start". </li>
+      <li> A crossword will be generated and you'll be able to play! </li>
+    </ul>
+  </div>
+
+  <!-- User's input for Crossword-->
+  <div id="user_input">
+    <div>
+      <label for="word_n_hint">Input</label>
+      <input type="text" id="word_n_hint" placeholder="Gimme something!">
+    </div>
+
+    <!-- List showing up -->
+    <div>
+      <label for="words_list">Words & Hints:</label>
+      <div id="words_list" name="words_list"> </div>
+    </div>
+  </div>
+
+  <!-- Crossword puzzle appears in this div -->
+  <div id="crossword_puzzle" hidden="true">
+    Crossword puzzle appears here!
+    <div>
+      <!-- Canvas -->
+      <canvas id="canvas" width="50" height="50"></canvas>
+      <div id="inputs"></div>
+    </div>
+
+    <!-- Across and down hints -->
+    <div id="hints">
+      <div id="across">
+        <h3 id="across_label"> Across </h3>
+      </div>
+
+      <div id="down">
+        <h3> Down </h3>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+
+</html>

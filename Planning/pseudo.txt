@@ -1,0 +1,144 @@
+https://crosswordlabs.com/
+
+
+
+
+
+I start by orientating the word with the most connections.  It will be horizontal. 
+
+The boxes are made for each word one by one.  They are not connected, so I will place an input text in each box that is invisible.  Only one letter can go in one box at a time.
+
+The next word will be orientated vertical.
+
+The boxes will be made one by one.  Again, they are not connected, so I will place an input text in each box that is invisible.  Only one letter can go in one box at a time.
+
+The canvas is extended per letter if needed.
+
+A third word is placed vertically.  If the canvas doesn't need to be extended, then it's not extended.  Otherwise, the canvas is extended per letter.
+
+Each word needs A) a coordinate B) coordinates for each of its letters.
+A fourth word is placed horizontally.  There are two options.  
+A) Check if there is a black mark before placing the word.  
+B) Loop through the words to see if there is a matching location at that spot.  
+
+If the letter at that spot matches the letter it is overlapping, then place the word there.  
+
+Otherwise, cancel that placement.  Option B is better.
+
+If a word is side-by-side with another word, cancel that placement.
+
+The remaining words without any connections are placed to the side.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+List of things to do:
+- Make a puzzle work
+- Generator for ai stuff?
+- Instructions show up
+- Ending
+- Final words
+
+
+Button event callers
+
+// GENERATE BOARD
+
+
+STACK for boxes
+  - placement: vertical vs horizontal
+  - full of letters
+  - check correct, incorrect
+
+// HELPER FUNCTION: INPUT IN MATRICES
+Place words in an array with corresponding hints right after
+3D array
+
+
+// Sort words from longest to shortest FUNCTION
+Return array
+
+// Canvas
+CORRESPOND WITH JAVASCRIPT
+Add in 
+
+// Main
+FUNCTION Put together
+  Put words and hints in array
+  
+  LET temp = first word (longest)
+  Loop through words array (starting from longest)
+    Loop through placed words
+      Check if there are letters in that word that connect 
+        Yes:
+          FUNCTION create boxes for the word 
+          Set temp as current word
+  END LOOP
+END FUNCTION
+
+
+FUNCTION create boxes
+  Vertical:
+    letter per line
+  Horizontal:
+    Spaces between letters on one line
+  Use of tables
+END FUNCTION
+
+
+
+
+// PRESS SUBMIT
+
+FUNCTION winner
+  LET correct = COUNTER
+  LET input_arr = FUNCTION input
+  IF input_arr is complaint
+    Complain
+    RETURN
+  Loop through entire array of words
+    Check if equal to input array
+      correct + 1
+      Style
+    Else
+      style
+Make a percentage of correct out of total array length
+Stop submit function, change it.
+END FUNCTION
+  
+    
+    
+
+FUNCTION input
+  Turn words in array
+  Loop through array for any empty string
+    RETURN complaint
+  Sort array
+END FUNCTION
+
+
+FUNCTION save
+  download crossword
+END FUNCTION
+
+
+FUNCTION instructions
+  display instructions, put in front of everything
+END FUNCTION
