@@ -66,7 +66,7 @@ class Term {
   }
 }
 
-let temp = [new Term("Supercalifragilisticexpialidocious", "Mary Poppins"), new Term("Cow", "it moos"), new Term("whatsapp", "an application"), new Term("dubadee", "something funny")]; // DELETE LATER
+//let temp = [new Term("Supercalifragilisticexpialidocious", "Mary Poppins"), new Term("Cow", "it moos"), new Term("whatsapp", "an application"), new Term("dubadee", "something funny")]; // DELETE LATER
 
 // EVENT LISTENERS 
 $("start_btn").addEventListener("click", main);
@@ -274,7 +274,7 @@ function insertSort(unsortedArray) {
 
 // The user presses "Start" and the crossword gets generated
 function main() {
-  list = [new Term("an", "Article"), new Term("nice", "Pretty, cool"), new Term("ill", "Sick, unwell"), new Term("ivory", "Tusks and teeth are made out of this")]; // DELETE LATER
+  //list = [new Term("an", "Article"), new Term("nice", "Pretty, cool"), new Term("ill", "Sick, unwell"), new Term("ivory", "Tusks and teeth are made out of this")]; // DELETE LATER
 
   adjust_instructions("Start");
 
